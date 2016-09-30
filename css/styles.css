@@ -1,0 +1,145 @@
+
+/*****---GENERAL---*****/
+
+
+
+
+
+/*****---OPEN--SLIDER---*****************/
+
+
+.sliderWrap {
+	max-width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.theSlider {
+	height: 500px;
+	display: block;
+	margin: 0 auto;
+/*	position:absolute;
+	top: 0; left: 0; right: 0; bottom: 0;*/
+	}
+.slide {width: 100%;height: 500px;}
+/*controls*/
+.sliderControls {
+	position: absolute;top: 10px; left: 0px; right: 0px; bottom: 10px;}
+.sliderControls .arrow i {
+	font-size: 36px;
+	color: #fafafa;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.42);
+	margin: auto;
+}
+.arrow {
+	padding: 25px;
+	position: absolute;
+	top: 0;bottom: 0;
+	display: flex;
+}
+.leftArrow {left:0}
+.rightArrow {right: 0;}
+.sliderControls .dots {
+	position: absolute;
+	bottom: 0;left: 50%;
+	transform: translateX(-50%);
+}
+.sliderControls .dots i {
+	padding: 5px;
+	margin: 0 10px;
+	pointer-events: fill;
+}
+.dots i:hover, .arrow {cursor: pointer;}
+.fadeDot {color:#212121;}
+.currentDot {color:#fafafa;}
+
+/*------CLOSE--SLIDER--*********/
+
+
+
+/*------SLIDER--DEMO---*********/
+
+.slide1 {background: #3949AB;}
+.slide2 {background: #D32F2F;}
+.slide3 {background: #1DE9B6;}
+.slide4 {background: #FFC107;}
+
+
+.theSlider {
+	background: linear-gradient(#b0b0b0,#ccc,#b0b0b0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+	width: 100%;
+	height: 50px;
+}
+@media screen and (min-width: 550px) {  /*---PHABLET---*/
+
+/*****---GENERAL---*****/
+
+
+
+} @media screen and (min-width: 768px) {  /*---TABLET---*/
+
+/*****---GENERAL---*****/
+
+
+
+
+} @media screen and (min-width: 1024px) {  /*---DESKTOP---*/
+
+
+/*****---GENERAL---*****/
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
