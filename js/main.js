@@ -57,6 +57,12 @@ function changeSlide(slide,dot,start,end) {
 	    });
 } // close function
 
+window.setInterval( function(){ 
+	getValues();
+    changeSlide($slides[$nextSlideNumber], $dots[$nextSlideNumber], 'right', 'left'); 
+  }  , 5000 );
+
+
 $dots.click(function() {
 	$dotNumber = $(this).index();
 
