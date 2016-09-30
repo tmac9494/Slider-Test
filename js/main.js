@@ -67,16 +67,11 @@ $('.sliderWrap').hover(function(ev){
 
 $dots.click(function() {
 	$dotNumber = $(this).index();
-	$nextDot = $dots[$dotNumber];
-	$nextSlide = $slides[$dotNumber];
-	$prevSlide = $slides[$dotNumber];
-	$prevDot = $dots[$dotNumber];
-
 	if ($('.currentDot').index() < $dotNumber){
-		changeSlide($nextSlide, $nextDot, 'right', 'left');
+		changeSlide($slides[$dotNumber], $dots[$dotNumber], 'right', 'left');
 
 	} else {
-		changeSlide($prevSlide, $prevDot, 'left', 'right');
+		changeSlide($slides[$dotNumber], $dots[$dotNumber], 'left', 'right');
 	}
 });
 
