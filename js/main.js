@@ -57,10 +57,19 @@ function changeSlide(slide,dot,start,end) {
 	    });
 } // close function
 
-window.setInterval( function(){ 
+var timer = window.setInterval( function(){ 
 	getValues();
     changeSlide($slides[$nextSlideNumber], $dots[$nextSlideNumber], 'right', 'left'); 
   }  , 5000 );
+
+$('.sliderWrap').hover(function(ev){
+    clearInterval(timer);
+}, function(ev){
+    timer = window.setInterval( function(){ 
+	getValues();
+    changeSlide($slides[$nextSlideNumber], $dots[$nextSlideNumber], 'right', 'left'); 
+  }  , 5000 );
+});
 
 
 $dots.click(function() {
