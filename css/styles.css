@@ -1,6 +1,9 @@
 
 /*****---GENERAL---*****/
 
+* {
+	box-sizing: border-box;
+}
 
 
 
@@ -25,18 +28,19 @@
 .slide {width: 100%;height: 500px;}
 /*controls*/
 .sliderControls {
-	position: absolute;top: 10px; left: 0px; right: 0px; bottom: 10px;}
-.sliderControls .arrow i {
-	font-size: 36px;
-	color: #fafafa;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.42);
-	margin: auto;
-}
+	position: absolute;top: 0; left: 0; right: 0; bottom: 0;}
 .arrow {
 	padding: 25px;
 	position: absolute;
 	top: 0;bottom: 0;
 	display: flex;
+	margin: 0;
+}
+.sliderControls .arrow i {
+	font-size: 36px;
+	color: #fafafa;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.42);
+	margin: auto;
 }
 .leftArrow {left:0}
 .rightArrow {right: 0;}
@@ -45,35 +49,170 @@
 	bottom: 0;left: 50%;
 	transform: translateX(-50%);
 }
-.sliderControls .dots i {
-	padding: 5px;
-	margin: 0 10px;
+.sliderControls .dots .dot {
+	margin: 0 5px;
+	width: 12px;
+	height: 12px;
 	pointer-events: fill;
+	display: inline-block;
+	border-radius: 50%;
 }
-.dots i:hover, .arrow {cursor: pointer;}
-.fadeDot {color:#212121;}
-.currentDot {color:#fafafa;}
+.dots .dot:hover, .arrow {cursor: pointer;}
+.fadeDot {background:#212121;}
+.currentDot {background:#fafafa;}
 
 /*------CLOSE--SLIDER--*********/
 
 
 
-/*------SLIDER--DEMO---*********/
+/*------SLIDER--DEMO--Example---*********/
 
-.slide1 {background: #3949AB;}
-.slide2 {background: #D32F2F;}
-.slide3 {background: #1DE9B6;}
-.slide4 {background: #FFC107;}
+.slide1 {background: linear-gradient(to bottom right,#29B6F6,#3949AB);}
+.slide2 {background: linear-gradient(to bottom right,#8E24AA,#009688);}
+.slide3 {background: linear-gradient(to bottom right,#64FFDA,#64DD17);}
+.slide4 {background: linear-gradient(to bottom right,#FFC107,#F4511E);}
+
+.exSlider {
+	/*border-top: 12px solid #BDBDBD;
+	border-left: 12px solid #9E9E9E;
+	border-right: 12px solid #757575;
+	border-bottom: 12px solid #616161;*/
+	border: 12px solid #757575;
+}
+
+.exSlider .theSlider {
+	background: linear-gradient(to bottom right,#616161,#424242,#212121);}
+
+.exSlider .slide {
+	/*box-shadow: inset 2px 2px 5px rgba(0,0,0,0.36),
+				inset 2px -2px 5px rgba(0,0,0,0.36),
+				inset -2px 2px 5px rgba(0,0,0,0.36),
+				inset -2px -2px 5px rgba(0,0,0,0.36);*/
+}
+
+/*controls*/
 
 
-.theSlider {
-	background: linear-gradient(#b0b0b0,#ccc,#b0b0b0);
+/*---Style--1--*/
+.exSlider .sliderControls .dots {
+	padding: 5px;
+	background: linear-gradient(to bottom right,#BDBDBD,#9E9E9E,#757575) ;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border: 1px solid #BDBDBD;
+	border-right: 1px solid #616161;
+	border-bottom: none;
+	box-shadow: 1px -1px 3px rgba(0,0,0,0.25),
+				-1px -1px 3px rgba(0,0,0,0.25),
+				inset 1px 1px 4px #E0E0E0,
+				inset  -1px 0px 4px #616161;
+}
+
+.exSlider .sliderControls .dots .dot {
+	border-top: 1px solid #757575;
+	border-left: 1px solid #757575;
+	border-right: 1px solid #212121;
+	border-bottom: 1px solid #212121;
+	box-shadow: inset 1px 1px 2px rgba(255,255,255,255.28),
+				inset -1px -1px 2px rgba(0,0,0,0.28),
+				inset -1px 1px 2px rgba(0,0,0,0.28),
+				inset 1px -1px 2px rgba(0,0,0,0.28);
+}
+
+.exSlider .sliderControls .dots .fadeDot {
+	background: #90A4AE;
+}
+.exSlider .sliderControls .dots .currentDot {
+	background: #C6FF00;
+}
+
+.exSlider .sliderControls .arrow {
+	transition: all .36s;
+}
+
+.exSlider .sliderControls .rightArrow:hover {
+	box-shadow: inset -70px 0 0 rgba(0,0,0,0.35);
+}
+
+.exSlider .sliderControls .leftArrow:hover {
+	box-shadow: inset 70px 0 0 rgba(0,0,0,0.35);
 }
 
 
 
+.plug {
+	font-size: 80px;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.42);
+}
+
+.slide-content,
+.content {
+	display: flex;
+}
+
+.slide-content {
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+}
+
+.slide-content .content {
+	color: #fafafa;
+	background: rgba(0,0,0,0.5);
+	padding: 16px;
+	min-height: 300px;
+	width: 45%;
+	margin: auto;
+	text-align: center;
+}
+
+.content-object {
+	margin: auto;
+}
+
+/*.slide-content .no-backg {
+	background: none;
+}*/
+
+/*---Style--2--*/
+
+/*.exSlider .sliderControls .dots {
+	background: #ccc;
+}
+
+.exSlider .sliderControls .dots .dot {
+	border-radius: 0;
+	margin: 16px 0;
+	width: 20px;
+	margin: 0 1px;
+}
+
+.exSlider .sliderControls .dots .dot:hover {
+	transform: scaleY(1.6);
+	background: #F44336;
+}
 
 
+.exSlider .sliderControls .dots .fadeDot {
+	
+}
+
+.exSlider .sliderControls .arrow {
+	background: rgba(0,0,0,0.45);
+}
+
+.exSlider .sliderControls .arrow i {
+	display: none;}
+
+.exSlider .sliderControls .rightArrow:hover {
+	
+}
+
+.exSlider .sliderControls .leftArrow:hover {
+	
+}
+
+*/
 
 
 
