@@ -42,7 +42,7 @@ function getValues() {
 function changeSlide(slide,dot,start,end) {
 	$('.dots').find('.currentDot').addClass('fadeDot').removeClass('currentDot');
 	$('.theSlider').find('.currentSlide').addClass('hideSlide').removeClass('currentSlide').hide('slide', {direction:end}, 500, function() {
-	    	
+
 	    	$('.theSlider').find(slide).removeClass('hideSlide').addClass('currentSlide').show('slide', {direction:start}, 500, function() {
 	    		$('.dots').find(dot).removeClass('fadeDot').addClass('currentDot')
 
